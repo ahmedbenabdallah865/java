@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="561.0" prefWidth="756.0" style="-fx-background-color: #6f002a;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ListquizzadminController">
+   <children>
+      <TableView fx:id="quizz" layoutX="18.0" layoutY="51.0" onMouseClicked="#OpenData" prefHeight="432.0" prefWidth="718.0">
+        <columns>
+          <TableColumn fx:id="ennonce" prefWidth="98.0" text="sujet" />
+          <TableColumn fx:id="question" prefWidth="182.0" text="question" />
+            <TableColumn fx:id="c3" maxWidth="10000.0" prefWidth="397.0" text="les propositions ">
+               <columns>
+                  <TableColumn fx:id="prop1" prefWidth="100.0" text="prop 1" />
+                  <TableColumn fx:id="prop2" minWidth="9.0" prefWidth="100.0" text="prop 2" />
+                  <TableColumn fx:id="prop3" prefWidth="100.0" text="prop 3" />
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="correct" minWidth="0.0" prefWidth="144.0" text="reponse correct" />
+        </columns>
+      </TableView>
+      <Button layoutX="253.0" layoutY="500.0" mnemonicParsing="false" onAction="#refresh" prefHeight="26.0" prefWidth="230.0" styleClass="button2" stylesheets="@../Style/fullpackstyling.css" text="Refresh" />
+      <Label layoutX="305.0" layoutY="14.0" prefHeight="27.0" prefWidth="148.0" text="Les questions:" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
